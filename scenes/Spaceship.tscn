@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://models/spaceCraft4.obj" type="ArrayMesh" id=1]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 1.95312, 0.551626, 1.95874 )
+
+[node name="Spaceship" type="Spatial"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Hull" type="RigidBody" parent="."]
+
+[node name="CollisionPolygon" type="CollisionShape" parent="Hull"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.231392, 0.651037 )
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Hull"]
+transform = Transform( -0.2, 0, -7.78829e-08, 0, 0.2, 0, 7.78829e-08, 0, -0.2, 0, 0, 0 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+
+[node name="CameraTarget" type="Spatial" parent="."]
+transform = Transform( -1, 3.25841e-07, 0, 5.30863e-14, 1.62921e-07, 1, 3.25841e-07, 1, -1.62921e-07, 0, 25, 0 )
