@@ -8,6 +8,7 @@
 extents = Vector3( 9.43667, 2.9544, 8.92229 )
 
 [node name="Spaceship" type="RigidBody"]
+gravity_scale = 0.0
 script = ExtResource( 2 )
 
 [node name="LeftThruster" type="Spatial" parent="."]
@@ -31,5 +32,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.16752, 3.07841 )
 shape = SubResource( 1 )
 
 [node name="Camera" type="Camera" parent="."]
+visible = false
 far = 300.0
 script = ExtResource( 3 )

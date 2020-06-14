@@ -16,8 +16,12 @@ _global_script_class_icons={
 [application]
 
 config/name="LameJam3"
-run/main_scene="res://scenes/World.tscn"
+run/main_scene="res://scenes/Lobby.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Net="*res://scripts/network.gd"
 
 [display]
 
